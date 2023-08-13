@@ -25,9 +25,9 @@ class Solution{
         
         m[row][col]=0;
         helper(m,row+1,col,ans,path+'D',n);
-        helper(m,row-1,col,ans,path+'U',n);
-        helper(m,row,col+1,ans,path+'R',n);
         helper(m,row,col-1,ans,path+'L',n);
+        helper(m,row,col+1,ans,path+'R',n);
+        helper(m,row-1,col,ans,path+'U',n);
         m[row][col]=1;
     }
     
@@ -41,7 +41,7 @@ class Solution{
         
         helper(m,0,0,ans,path,n);
         
-        sort(ans.begin(),ans.end());
+        // sort(ans.begin(),ans.end());
         
         return ans;
     }
